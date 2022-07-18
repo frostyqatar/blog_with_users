@@ -82,12 +82,12 @@ class Comment(db.Model):
 # db.create_all()
 # db.create_all(bind=["two"])
 class registerForm(FlaskForm):
-    email = StringField(label='Email', validators=[DataRequired(), Email()])
+    email = StringField(label='Email', validators=[DataRequired()])
     password = PasswordField(label="Password", validators=[DataRequired()])
     username = StringField(label='Username', validators=[DataRequired()])
     submit = SubmitField(label="REGISTER!")
 class loginForm(FlaskForm):
-    email = StringField(label='Email', validators=[DataRequired(), Email()])
+    email = StringField(label='Email', validators=[DataRequired()])
     password = PasswordField(label="Password", validators=[DataRequired()])
     submit = SubmitField(label="Submit")
 
